@@ -29,6 +29,7 @@ async function fetchWeatherByCity(city) {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
     );
     const geoData = await geoRes.json();
+    console.log(geoData);
     if (geoData.cod !== 200) {
       alert("City not found");
       return;
@@ -47,6 +48,7 @@ async function fetchWeatherByCoords(lat, lon, cityName = "") {
       `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
     );
     const data = await res.json();
+    console.log(data)
 
     if (!data.list || data.list.length === 0) return;
 
@@ -60,7 +62,7 @@ async function fetchWeatherByCoords(lat, lon, cityName = "") {
 
     // Hourly Forecast: next 6 entries
     hourlyForecastElem.innerHTML = "";
-    data.list.slice(0, 6).forEach((hour) => {
+    data.list.slice(0, 7).forEach((hour) => {
       const hourDiv = document.createElement("div");
       hourDiv.classList.add("hourly");
       hourDiv.innerHTML = `
@@ -83,7 +85,7 @@ async function fetchWeatherByCoords(lat, lon, cityName = "") {
       const condDiv = document.createElement("div");
       condDiv.classList.add("cond_card");
       condDiv.innerHTML = `
-        <img src="./assets/images/humid.png" />
+        <img src="./assets/images/windy.png" />
         <p>${cond.label}</p>
         <h2>${cond.value}</h2>
       `;
