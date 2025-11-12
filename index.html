@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Web || Kanyarwanda Tech</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-</head>
-<body>
-  <div class="wrappers">
-    <!-- Left Panel -->
-    <div class="wrapper_1">
-      <div class="main_data">
-        <!-- Search Bar -->
-        <div class="search_bar">
-          <input type="text" id="cityName" placeholder="Search For Cities" />
-          <button id="searchBtn">Search</button>
-        </div>
-
-        <!-- Current Weather -->
-        <div class="general_data_top">
-          <div class="data_main_div">
-            <h2 id="city">Kigali</h2>
-            <h3 id="temp">--°C</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Web || Kanyarwanda Tech</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="wrappers">
+      <!-- Left Panel -->
+      <div class="wrapper_1">
+        <div class="main_data">
+          <!-- Search Bar & Welcome -->
+          <div class="welcome">
+            <h2>
+              Welcome to
+              <span>E-teganya<br /></span>
+            </h2>
+            <p>
+              Your daily weather companion. Forecasts that help you plan, rain
+              or shine!
+            </p>
           </div>
-          <div class="icons">
-            <img id="weatherIcon" src="./assets/images/sunny.png" alt="Weather Icon" />
+          <div class="search_bar">
+            <input type="text" id="cityName" placeholder="Any Location...." />
+            <button id="searchBtn">Search</button>
           </div>
+
+          <!-- Current Weather -->
+          <div class="general_data_top">
+            <div class="data_main_div">
+              <h2 id="city">Kigali</h2>
+              <h3 id="temp">--°C</h3>
+            </div>
+            <div class="icons">
+              <img
+                id="weatherIcon"
+                src="./assets/images/sunny.png"
+                alt="Weather Icon"
+              />
+            </div>
+          </div>
+
+          <!-- Today's Hourly Forecast -->
+          <div class="today_forecast" id="hourlyForecast"></div>
+
+          <!-- Air Conditions -->
+          <div class="air_conditions" id="airConditions"></div>
         </div>
+      </div>
 
-        <!-- Today's Hourly Forecast -->
-        <div class="today_forecast" id="hourlyForecast"></div>
-
-        <!-- Air Conditions -->
-        <div class="air_conditions" id="airConditions"></div>
+      <!-- Right Panel -->
+      <div class="wrapper_2">
+        <h3 id="fore_title">7-Day Forecast</h3>
+        <div class="forecast_data" id="weeklyForecast"></div>
       </div>
     </div>
 
-    <!-- Right Panel -->
-    <div class="wrapper_2">
-      <h3 style="text-align:center;">7-Day Forecast</h3>
-      <div class="forecast_data" id="weeklyForecast"></div>
-    </div>
-  </div>
-
-  <script src="./assets/js/main.js"></script>
-</body>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
