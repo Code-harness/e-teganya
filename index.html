@@ -3,32 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Web || Kanyarwanda Tech</title>
+    <title>Weather Forecast Web App | Kanyarwanda Tech</title>
+
+    <meta
+      name="description"
+      content="E-teganya: Your daily weather companion for Kigali and worldwide. Get real-time weather updates, hourly forecasts, and 7-day predictions."
+    />
+    <meta
+      name="keywords"
+      content="Weather, Forecast, Kigali Weather, E-teganya, Daily Weather, Hourly Forecast, 7-Day Forecast"
+    />
+    <meta name="author" content="Kanyarwanda Tech" />
+
+    <meta property="og:title" content="E-teganya Weather Web App" />
+    <meta
+      property="og:description"
+      content="Real-time weather updates for Kigali and worldwide. Plan your day with E-teganya!"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://e-teganya.vercel.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://e-teganya.vercel.app/assets/images/e-teganya_logo.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="E-teganya Weather Web App" />
+    <meta
+      name="twitter:description"
+      content="Real-time weather updates for Kigali and worldwide. Plan your day with E-teganya!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://e-teganya.vercel.app/assets/images/e-teganya_logo.png"
+    />
+
+    <link rel="canonical" href="https://e-teganya.vercel.app/" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/images/e-teganya_logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "E-teganya Weather App",
+        "url": "https://e-teganya.vercel.app",
+        "description": "E-teganya provides daily weather updates and 7-day forecasts for Kigali and worldwide.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://e-teganya.vercel.app?city={city}",
+          "query-input": "required name=city"
+        }
+      }
+    </script>
   </head>
   <body>
-    <div class="wrappers">
+    <main class="wrappers">
       <!-- Left Panel -->
-      <div class="wrapper_1">
-        <div class="main_data">
-          <!-- Search Bar & Welcome -->
+      <section class="wrapper_1">
+        <article class="main_data">
           <div class="welcome">
             <h2>
-              Welcome to
-              <span>E-teganya<br /></span>
+              Welcome to <span>E-teganya<br /></span>
             </h2>
             <p>
               Your daily weather companion. Forecasts that help you plan, rain
               or shine!
             </p>
           </div>
+          <!-- Search Bar -->
           <div class="search_bar">
-            <input type="text" id="cityName" placeholder="Any Location...." />
+            <input
+              type="text"
+              id="cityName"
+              placeholder="Enter any location..."
+            />
             <button id="searchBtn">Search</button>
           </div>
 
           <!-- Current Weather -->
-          <div class="general_data_top">
+          <section class="general_data_top">
             <div class="data_main_div">
               <h2 id="city">Kigali</h2>
               <h3 id="temp">--°C</h3>
@@ -37,25 +95,29 @@
               <img
                 id="weatherIcon"
                 src="./assets/images/sunny.png"
-                alt="Weather Icon"
+                alt="Current weather icon"
               />
             </div>
-          </div>
+          </section>
 
           <!-- Today's Hourly Forecast -->
-          <div class="today_forecast" id="hourlyForecast"></div>
+          <section class="today_forecast" id="hourlyForecast">
+            <h3>Today's Hourly Forecast</h3>
+          </section>
 
           <!-- Air Conditions -->
-          <div class="air_conditions" id="airConditions"></div>
-        </div>
-      </div>
+          <section class="air_conditions" id="airConditions">
+            <h3>Air Quality & Conditions</h3>
+          </section>
+        </article>
+      </section>
 
       <!-- Right Panel -->
-      <div class="wrapper_2">
+      <aside class="wrapper_2">
         <h3 id="fore_title">7-Day Forecast</h3>
         <div class="forecast_data" id="weeklyForecast"></div>
-      </div>
-    </div>
+      </aside>
+    </main>
 
     <script src="./assets/js/main.js"></script>
   </body>
