@@ -20,6 +20,7 @@ body {
 }
 
 .wrappers {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -185,6 +186,10 @@ body {
 .today_forecast::-webkit-scrollbar-thumb {
   background: #208bbd;
   border-radius: 3px;
+}
+footer{
+  position: absolute;
+  bottom: 20px;
 }
 
 /* Responsive */
