@@ -189,7 +189,17 @@ body {
 }
 footer{
   position: absolute;
-  bottom: 20px;
+  height: auto;
+  width: 100%;
+  top: 10px;
+  text-align: start;
+}
+.footer_main{
+  width: fit-content;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: rgb(5, 167, 40);
 }
 
 /* Responsive */
